@@ -4,6 +4,7 @@
   "description": "Simple async-await mutex.",
   "main": "index.js",
   "scripts": {
+    "prepublishOnly": "npm run build",
     "build": "tsc --project .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
