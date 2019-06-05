@@ -14,8 +14,8 @@ const release = await mutex.wait()
 release()
 ```
 
-### API
+### mutex.wait(): Promise<() => void>
 
-#### async mutex.wait(): Promise<() => void>
+Returns: `Promise<() => void>`
 
 Waits for other claims on this mutex, then resolves with a function that can be called to release the claim on this mutex.
