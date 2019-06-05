@@ -1,3 +1,6 @@
 .vscode
+.github
 *.ts
 !*.d.ts
+tsconfig.json
+.prettierrc.yml

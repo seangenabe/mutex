@@ -1,21 +1,8 @@
-export class Mutex {
-  private q: Set<Promise<void>>
+import { Semaphore } from "@seangenabe/semaphore"
 
+export class Mutex extends Semaphore {
   constructor() {
-    this.q = new Set<Promise<void>>()
-  }
-
-  async wait(): Promise<() => void> {
-    const { q } = this
-    await Promise.all([...q])
-    let resolve
-    const p = new Promise<void>(r => (resolve = r))
-    const lock = () => {
-      q.delete(p)
-      resolve()
-    }
-    q.add(p)
-    return lock
+    super(1)
   }
 }
 

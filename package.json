@@ -2,28 +2,30 @@
   "name": "@seangenabe/mutex",
   "version": "1.0.2",
   "description": "Simple async-await mutex.",
-  "main": "index.js",
-  "scripts": {
-    "prepublishOnly": "npm run build",
-    "build": "tsc --project .",
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "keywords": [
+    "mutex",
+    "semaphore"
+  ],
+  "homepage": "https://github.com/seangenabe/mutex#readme",
+  "bugs": {
+    "url": "https://github.com/seangenabe/mutex/issues"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/seangenabe/mutex.git"
   },
-  "keywords": [
-    "mutex",
-    "semaphore"
-  ],
-  "author": "Sean Genabe <seangenabe@outlook.com>",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/seangenabe/mutex/issues"
+  "author": "Sean Marvi Oliver Genabe <seanmarviolivergenabe@gmail.com>",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "homepage": "https://github.com/seangenabe/mutex#readme",
+  "dependencies": {
+    "@seangenabe/semaphore": "^1.0.0"
+  },
   "devDependencies": {
-    "typescript": "^2.6.2"
-  },
-  "dependencies": {}
+    "typescript": "^3.5.1"
+  }
 }
