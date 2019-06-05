@@ -9,9 +9,12 @@ import { Mutex } from '@seangenabe/mutex'
 
 const mutex = new Mutex()
 
-const release = await mutex.wait()
-...
-release()
+;(async () => {
+  const release = await mutex.wait()
+  // ...
+  release()
+})()
+
 ```
 
 ### mutex.wait(): Promise<() => void>
