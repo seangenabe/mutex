@@ -4,3 +4,4 @@
 !*.d.ts
 tsconfig.json
 .prettierrc.yml
+*.tsbuildinfo
